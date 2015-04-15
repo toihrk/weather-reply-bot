@@ -2,8 +2,17 @@ var util    = require('util');
 var twitter = require('twitter');
 var maps    = require('googlemaps');
 var request = require('request-json');
+var fs = require('fs');
 
-var config = require('./config.json');
+var config = {}
+
+try {
+  fs.statSync("./config.json");
+  config = require('./config.json');
+} catch (e) {
+  console.log("no config.json");
+}
+
 var account = "@"+ (process.env.account || config.account);
 
 var client = new twitter({
