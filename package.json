@@ -1,12 +1,12 @@
 {
-  "name": "TwitterBot",
+  "name": "weather-reply-bot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "toihrk",
   "dependencies": {
     "googlemaps": "^0.1.20",
     "request-json": "^0.5.2",
