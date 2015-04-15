@@ -4,7 +4,7 @@ var maps    = require('googlemaps');
 var request = require('request-json');
 
 var config = require('./config.json');
-var account = "@"+config.account;
+var account = "@"+ (process.env.account || config.account);
 
 var client = new twitter({
     consumer_key:         process.env.consumer_key        || config.consumer.key,
